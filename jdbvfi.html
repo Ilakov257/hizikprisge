@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин одежды «Престиж»</title>
+    <style>
+        /* Импорт скандинавских шрифтов: элегантный Cormorant для заголовков и чистый Inter для текста */
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap');
+
+        /* Сброс стилей */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #faf9f6; /* Мягкий алебастровый/молочный фон */
+            color: #2d2d2d; /* Мягкий графитовый цвет текста вместо резкого черного */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+            
+            /* Плавное появление сайта при загрузке */
+            opacity: 0;
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 50px 30px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.015);
+            text-align: center;
+        }
+
+        /* Шапка */
+        header {
+            margin-bottom: 45px;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 38px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            color: #1c1c1c;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: 4px;
+            color: #8c867e; /* Приглушенный серо-бежевый */
+            text-transform: uppercase;
+        }
+
+        /* Разделы */
+        .section {
+            margin-bottom: 45px;
+        }
+
+        h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: #1c1c1c;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        /* Список завозов (скандинавский минимализм через тонкие линии) */
+        .arrival-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .arrival-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 5px;
+            border-bottom: 1px solid #f0ede8; /* Тонкая эстетичная линия */
+            text-align: left;
+        }
+
+        .arrival-row:last-child {
+            border-bottom: none; /* Убираем линию у последнего элемента */
+        }
+
+        .date {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 21px;
+            font-weight: 600;
+            color: #7a7165; /* Благородный тауп/землистый оттенок */
+        }
+
+        .details {
+            font-size: 13px;
+            color: #5c5750;
+            font-weight: 300;
+            text-align: right;
+        }
+
+        /* Кнопки и ссылки */
+        .links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .link-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background-color: #f5f2ed; /* Светло-бежевый эко-фон кнопки */
+            color: #33302c;
+            text-decoration: none;
+            border-radius: 40px; /* Округлые мягкие формы */
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+.link-btn:hover {
+            background-color: #eae5dc; /* Чуть темнее при наведении */
+            color: #1c1c1c;
+            transform: translateY(-1px); /* Легкий эффект приподнимания */
+        }
+
+        /* Подвал */
+        footer {
+            margin-top: 15px;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #b0aaa0;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Престиж</h1>
+            <div class="subtitle">Одежда & Эстетика</div>
+        </header>
+
+        <div class="section">
+            <h2>График завозов</h2>
+            <div class="arrival-list">
+                
+                <div class="arrival-row">
+                    <span class="date">15.06</span>
+                    <span class="details">Летний дроп: льняные костюмы и платья</span>
+                </div>
+                
+                <div class="arrival-row">
+                    <span class="date">28.06</span>
+                    <span class="details">Базовая коллекция и аксессуары</span>
+                </div>
+
+                <div class="arrival-row">
+                    <span class="date">10.07</span>
+                    <span class="details">Scandi-минимализм: новинки сезона</span>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Связь и соцсети</h2>
+            <div class="links-list">
+                <a href="#" class="link-btn">Instagram бутика</a>
+                <a href="#" class="link-btn">Telegram канал</a>
+                <a href="#" class="link-btn">Написать в WhatsApp</a>
+                <a href="#" class="link-btn">Мы на карте</a>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2026 престиж. медленная мода.
+        </footer>
+    </div>
+
+</body>
+</html>
